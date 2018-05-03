@@ -13,7 +13,7 @@ module alu(
             ALU_ADD: alu_res <= alu_a + alu_b;
             ALU_SUB: alu_res <= alu_a - alu_b;
             ALU_AND: alu_res <= alu_a & alu_b;
-            ALU_OR: alu_res <= alu_a | alu_b;
+            ALU_OR:  alu_res <= alu_a | alu_b;
             ALU_XOR: alu_res <= alu_a ^ alu_b;
             ALU_NOR: alu_res <= !(alu_a | alu_b);
         endcase
