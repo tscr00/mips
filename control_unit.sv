@@ -2,13 +2,14 @@
 
 
 module control_unit(
-    input logic [31:0] instr,
-    input logic [31:0] reg_out_1,
-    input logic [31:0] reg_out_2,
+    input logic  [31:0] instr,
+    input logic  [31:0] reg_out_1,
+    input logic  [31:0] reg_out_2,
     output logic [31:0] alu_b,
-    output logic [4:0] reg_w,
-    output logic reg_write_en,
-    output logic [5:0] alu_op
+    output logic [4:0]  reg_w,
+    output logic        reg_write_en,
+    output logic [5:0]  alu_op,
+    output logic        should_branch
     );
     
     import constants::*;

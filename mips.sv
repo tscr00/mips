@@ -21,6 +21,7 @@ module mips(
     // control logic
     logic [5:0] opcode;
     logic reg_write_en;
+    logic should_branch;
     
     // sign-extended immediate
     logic [31:0] imm;
@@ -52,7 +53,8 @@ module mips(
         .reg_out_2(reg_out_2),
         .reg_w(reg_w),
         .reg_write_en(reg_write_en),
-        .alu_op(alu_op)
+        .alu_op(alu_op),
+        .should_branch(should_branch)
     );
     
     register_file rf(
