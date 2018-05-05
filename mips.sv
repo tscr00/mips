@@ -31,6 +31,8 @@ module mips(
     
     // next program counter (better reuse ALU after pipeline implemented)
     assign pc4 = pc + 4;
+
+    assign pc_branch = alu_res;
     
     always @(posedge clk) begin
         pc <= pc4;
