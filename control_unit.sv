@@ -61,6 +61,11 @@ module control_unit(
     always_comb begin
         case(opcode)
             OP_J: should_branch <= 1;
+            OP_JAL: should_branch <= 1;
+            OP_BEQ: should_branch <= 1;
+            OP_BNE: should_branch <= 1;
+            OP_BLEZ: should_branch <= 1;
+            OP_BGTZ: should_branch <= 1;
             default: should_branch <= 0;
         endcase
     end
