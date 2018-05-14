@@ -57,6 +57,13 @@ module control_unit(
             default: reg_write_en <= 0;
         endcase
     end
+
+    always_comb begin
+        case(opcode)
+            OP_J: should_branch <= 1;
+            default: should_branch <= 0;
+        endcase
+    end
     
     always_comb begin
             case(opcode)
